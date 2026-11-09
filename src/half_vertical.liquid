@@ -1,0 +1,58 @@
+<div class="layout">
+
+  <div class="ds-compact ds-vertical">
+
+    <div class="ds-compact-header">
+
+      <span>✦ DAILY SPARK</span>
+
+    </div>
+
+    <div class="ds-vertical-main">
+
+      <div class="ds-vertical-time">
+        {{ display_time }}
+      </div>
+
+      <div class="ds-vertical-date">
+
+        {{ display_period }} ·
+        {{ display_day }},
+        {{ display_date }}
+        {{ display_month }}
+
+      </div>
+
+      <div class="ds-left-divider"
+           style="background: #111111;">
+      </div>
+
+      <div class="ds-vertical-quote {{ quote_class }}">
+        “{{ display_quote | escape }}”
+      </div>
+
+      <div class="ds-author">
+        — {{ display_author | escape }}
+      </div>
+
+    </div>
+
+    <div class="ds-compact-footer">
+
+      {% if display_source == "zenquotes" %}
+        <span>zenquotes.io</span>
+      {% elsif display_source == "custom" %}
+        <span>PERSONAL QUOTE</span>
+      {% else %}
+        <span>DAILY SPARK</span>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="title_bar">
+  <span class="title">Daily Spark</span>
+</div>

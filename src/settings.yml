@@ -1,0 +1,32 @@
+
+---
+name: Daily Spark
+description: Clock and personalized daily quotes
+
+strategy: polling
+polling_url: https://zenquotes.io/api/today
+polling_verb: get
+polling_headers: ''
+
+static_data: ''
+framework_version: latest
+
+refresh_interval: 15
+
+no_screen_padding: 'no'
+dark_mode: 'no'
+
+custom_fields:
+  - keyname: about
+    name: About Daily Spark
+    field_type: author_bio
+    category: life,productivity
+    description: >
+      Daily Spark is a personalized e-ink dashboard
+      featuring a clock, date, and daily quotes.
+      It supports both original custom quotes and
+      quotes provided by ZenQuotes.
+      External quote data: https://zenquotes.io/
+      Created by itscryptune.
+    github_url: https://github.com/itscryptune
+    learn_more_url: https://zenquotes.io/

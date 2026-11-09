@@ -1,0 +1,53 @@
+<div class="layout">
+
+  <div class="ds-compact ds-mini">
+
+    <div class="ds-mini-header">
+      ✦ DAILY SPARK
+    </div>
+
+    <div class="ds-mini-date">
+
+      {{ display_day | upcase }}
+      · {{ display_time }}
+      {{ display_period }} 
+
+    </div>
+
+    <div class="ds-mini-quote {{ quote_class }}">
+
+      “{{ display_quote | escape }}”
+
+    </div>
+
+    <div class="ds-mini-author">
+
+      — {{ display_author | escape }}
+
+    </div>
+
+    <div class="ds-compact-footer">
+
+      {% if display_source == "zenquotes" %}
+
+        <span>zenquotes.io</span>
+
+      {% elsif display_source == "custom" %}
+
+        <span>PERSONAL QUOTE</span>
+
+      {% else %}
+
+        <span>DAILY SPARK</span>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="title_bar">
+  <span class="title">Daily Spark</span>
+</div>

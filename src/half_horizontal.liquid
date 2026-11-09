@@ -1,0 +1,77 @@
+<div class="layout">
+
+  <div class="ds-compact">
+
+    <div class="ds-compact-header">
+
+      <span>✦ DAILY SPARK</span>
+
+      <span>QUOTE OF THE DAY</span>
+
+    </div>
+
+    <div class="ds-compact-body">
+
+      <!-- LEFT: DATE -->
+
+      <div class="ds-compact-date">
+
+        <div class="ds-compact-day">
+          {{ display_day | upcase }}
+        </div>
+
+        <div class="ds-compact-number">
+          {{ display_date }}
+        </div>
+
+        <div class="ds-compact-day">
+          {{ display_month | upcase }}
+        </div>
+
+        <div class="ds-compact-clock">
+          {{ display_time }}
+        </div>
+
+        <div class="ds-compact-day">
+          {{ display_period }}
+        </div>
+
+      </div>
+
+      <!-- RIGHT: QUOTE -->
+
+      <div class="ds-compact-quote">
+
+        <div class="ds-compact-text {{ quote_class }}">
+          “{{ display_quote | escape }}”
+        </div>
+
+        <div class="ds-compact-author">
+          — {{ display_author | escape }}
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="ds-compact-footer">
+
+      <span>ONE DAY. ONE THOUGHT.</span>
+
+      {% if display_source == "zenquotes" %}
+        <span>zenquotes.io</span>
+      {% elsif display_source == "custom" %}
+        <span>PERSONAL QUOTE</span>
+      {% else %}
+        <span>DAILY SPARK</span>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="title_bar">
+  <span class="title">Daily Spark</span>
+</div>

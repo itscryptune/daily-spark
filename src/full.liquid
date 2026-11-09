@@ -1,0 +1,145 @@
+<div class="layout">
+
+  <div class="ds-root">
+
+    <!-- LEFT: CLOCK AND DATE -->
+
+    <div class="ds-left">
+
+      <div>
+
+        <div class="ds-brand">
+          ✦ DAILY SPARK
+        </div>
+
+        <div class="ds-brand-line"></div>
+
+      </div>
+
+      <div class="ds-date-area">
+
+        <div class="ds-weekday">
+          {{ display_day }}
+        </div>
+
+        <div class="ds-date-line">
+
+          <div class="ds-day-number">
+            {{ display_date }}
+          </div>
+
+          <div class="ds-month-year">
+
+            <div class="ds-month">
+              {{ display_month }}
+            </div>
+
+            <div class="ds-year">
+              {{ display_year }}
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="ds-left-divider"></div>
+
+        <div class="ds-clock">
+          {{ display_time }}
+        </div>
+
+        <div class="ds-period">
+          {{ display_period }} · LOCAL TIME
+        </div>
+
+      </div>
+
+      <div class="ds-left-footer">
+        MAKE TODAY COUNT.
+      </div>
+
+    </div>
+
+    <!-- RIGHT: QUOTE -->
+
+    <div class="ds-right">
+
+      <div class="ds-right-header">
+
+        <div class="ds-heading">
+          {% if display_source == "custom" %}
+            FROM MY COLLECTION
+          {% else %}
+            QUOTE OF THE DAY
+          {% endif %}
+        </div>
+
+        <div class="ds-star">
+          ✦
+        </div>
+
+      </div>
+
+      <div class="ds-quote-area">
+
+        <div class="ds-quote-mark">
+          “
+        </div>
+
+        <div class="ds-quote {{ quote_class }}">
+          {{ display_quote | escape }}
+        </div>
+
+        <div class="ds-author">
+
+          — {{ display_author | escape }}
+
+        </div>
+
+      </div>
+
+      <div class="ds-right-footer">
+
+        <span>
+          ONE DAY. ONE THOUGHT.
+        </span>
+
+        {% if display_source == "zenquotes" %}
+
+          <span class="ds-credit">
+            zenquotes.io
+          </span>
+
+        {% elsif display_source == "custom" %}
+
+          <span class="ds-credit">
+            PERSONAL QUOTE
+          </span>
+
+        {% else %}
+
+          <span class="ds-credit">
+            DAILY SPARK
+          </span>
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="title_bar">
+
+  <span class="title">
+    Daily Spark
+  </span>
+
+  <span class="instance">
+    itscryptune
+  </span>
+
+</div>
